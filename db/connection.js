@@ -1,3 +1,5 @@
+// configuração de conexão com o bd
+
 const Sequelize = require('sequelize');
 
 const sequelize = new Sequelize({
