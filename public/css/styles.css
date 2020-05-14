@@ -178,7 +178,52 @@
     position: absolute;
     right: 250px;
     top: 40px;
-   
+}
+
+/*add page */
+
+#add-form-container {
+    margin-top: 100px;
+}
+#form-box {
+    padding: 50px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    background-color: #fff7cc;
+    margin-bottom: 50px;
+}
+
+#add-form-container h2 {
+    color: #f03e3e;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#add-form-container form label {
+    font-weight: bold;
+}
+#add-form-container input, #add-form-container textarea {
+    border: 2px solid #ccc;
+}
+
+#form-box button {
+    height: 50px;
+    width: 200px;
+    background-color: #f03e3e;
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin-top: 20px;
+    margin-left: 400px;
 
 }
 
+#add-form-container h1 {
+    margin-bottom: 20px;
+}
+
+#form-box button:hover {
+    background-color:#fff;
+    color: #f03e3e;
+    border-color: #f03e3e;
+}
