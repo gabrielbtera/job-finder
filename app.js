@@ -22,6 +22,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exp_hdl({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+
+// pasta de arquivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+
 // conexão com o banco de dados
 db
     .authenticate()
@@ -34,7 +40,7 @@ db
 
 // criação de rota
 app.get('/', function(requisicao, resposta) {
-    resposta.send("Tudo ok, blz");
+    resposta.render("index"); // rederiza a pag pelo servidor
 });
 
 // rotas do job
