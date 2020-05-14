@@ -23,4 +23,3 @@ const job = db.define('jobs',{
 });
 
 module.exports = job;
-
