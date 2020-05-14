@@ -1,6 +1,8 @@
 // iniciando o servidor
 const express    = require('express');
+const exp_hdl    = require("express-handlebars"); // instalando o handlebars
 const app        = express();
+const path       = require("path"); // instalando o handlebars
 const PORT       = 3000;
 const bodyParser = require('body-parser');
 // conexão com o banco de dados
@@ -14,6 +16,11 @@ app.listen(PORT, function(){
 // utilizar o body-parser
 app.use(bodyParser.urlencoded({extended : false}));
 
+
+// handlebars // instalando o handlebars
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exp_hdl({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 // conexão com o banco de dados
 db
