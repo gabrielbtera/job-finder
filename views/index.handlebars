@@ -1,7 +1,8 @@
+
 <div id ="top-container" class="container-fluid">
         <h1 id="main-title" class="text-center">Encontre o emprego dos seus sonhos</h1>
         <p id="main-subtitle" class="text-center">Somos o site de mais vagas de tecnologia no mercado, direcionadas a home office.</p>
-        <form id="search-form" class = "form-inline" action="">
+        <form id="search-form" class = "form-inline" action="/" method="GET">
             <div class="form-group col-md-10">
                 <input type="text" class="form-control" id="job" name="job" placeholder="Digite a vaga que está buscando:">
             </div>
@@ -14,16 +15,20 @@
         <div id = "jobs-container" class="container">
             <div class = "row" >
                 <div class="col-md-12">
-                    <h2 id = "job-list-title">Veja as nossas vagas em destaque:</h2>
+                    {{#if search}}
+                        <h2 id = "job-list-title">Buscando vagas que contém: "{{search}}"</h2>
+                    {{else}}
+                        <h2 id = "job-list-title">Veja as nossas vagas em destaque:</h2>
+                    {{/if}}
                     <ul id = "job-list" class="list-group">
                         {{#each jobs}}
                         <li class="list-group-item {{#if dataValues.trab_novo}}new-job {{/if}}">
                             <img src="/img/company.svg" alt="Company">
                             <p1>{{dataValues.empresa}}</p1>
                             <h2>{{dataValues.titulo}}</h2>
-                            <p2>{{dataValues.salario}}</p2>
+                            <p2>R$ {{dataValues.salario}}</p2>
                             <span class="new-job-label">Nova</span>
-                            <a class = "btn btn-primary">Ver vaga</a>
+                            <a class = "btn btn-primary" href="/jobs/view{{dataValues.id}}">Ver vaga</a>
                         </li>
                         {{/each}}
                     </ul>

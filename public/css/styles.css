@@ -83,11 +83,13 @@
     border-radius: 0;
     height: 50px;
     font-size: 18px;
+
 }
 #search-form button{
     color: #fff;
     background-color:#f03e3e ;
     border: 1px solid transparent;
+    transition: 0.5s;
 }
 
 #search-form button :hover{
@@ -222,8 +224,59 @@
     margin-bottom: 20px;
 }
 
-#form-box button:hover {
+#form-box button, .back-link.main-color:hover {
     background-color:#fff;
     color: #f03e3e;
     border-color: #f03e3e;
+}
+
+
+/* view */
+
+#job-view-container{
+    margin-top: 100px;
+}
+
+.back-link.main-color{
+    padding: 5px 18px;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #f03e3e;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+
+#img-container{
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+
+#img-container img {
+    width: 80px;
+    border: 1px solid #212529;
+    border-radius: 50%;
+    background-color: #fff;
+
+}
+
+.job-desc{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.main-color{
+    color: #f03e3e;
+    
+}
+.main-color.empresa{
+    color: #f03e3e;
+    font-weight: bold;
 }

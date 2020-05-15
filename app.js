@@ -6,7 +6,8 @@ const path       = require("path"); // instalando o handlebars
 const PORT       = 3000;
 const bodyParser = require('body-parser');
 const job        = require('./models/job');
-
+const Sequelize  = require('sequelize')
+const Op         = Sequelize.Op;
 
 // conexão com o banco de dados
 const db         = require('./db/connection'); 
@@ -43,13 +44,32 @@ db
 
 // criação de rota
 app.get('/', function(requisicao, resposta) {
-    job.findAll({order: [
-        ['createdAt', 'DESC']
-    ]}).then(jobs => {
-        resposta.render('index', {
-            jobs
-        });
-    });
+
+    let search = requisicao.query.job;
+    let query = '%'+search+'%';
+    if(! search) {
+        job.findAll({order: [
+            ['createdAt', 'DESC']
+        ]}).then(jobs => {
+            resposta.render('index', {
+                jobs
+            });
+        })
+        .catch(err => console.log(err));
+    }else {
+        job.findAll({
+            where : {titulo : {[Op.like] : query}},
+            order: [
+            ['createdAt', 'DESC']
+        ]}).then(jobs => {
+            resposta.render('index', {
+                jobs, search
+            });
+        })
+        .catch(err => console.log(err));
+    }
+
+    
      // rederiza a pag pelo servidor
 });
 
