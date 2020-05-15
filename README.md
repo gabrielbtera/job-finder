@@ -1,7 +1,7 @@
 Site de busca de empregos para programadores, projeto final do curso de JS do básico ao avançado.
 
 
-Intruções para executar:
+Instruções para executar:
 -Com o terminal direcionando na pasta execute: 
 npm run dev 
 ou
