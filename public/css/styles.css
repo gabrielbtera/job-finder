@@ -187,6 +187,7 @@
 #add-form-container {
     margin-top: 100px;
 }
+
 #form-box {
     padding: 50px;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, .15);
@@ -213,6 +214,7 @@
     height: 50px;
     width: 200px;
     background-color: #f03e3e;
+    color: #f7f9fc;
     border: 1px solid transparent;
     border-radius: 0;
     margin-top: 20px;
@@ -245,7 +247,6 @@
     text-decoration: none;
     transition: 0.5s;
 }
-
 
 
 #img-container{
@@ -281,6 +282,9 @@
     font-weight: bold;
 }
 
+.attbr{
+    text-align: center;
+}
 /* responsive */
 @media (max-width: 481px){
     /* nav bar */
@@ -308,11 +312,19 @@
         padding: 0;
 
     }
+
     
-    .form-control{
+    
+    #job{
         position: absolute;
         width: 150px;
         left: 0px;
+        top: -80px;
+        height: 200px;
+        padding: 0;
+       
+
+        
 
     }
 
@@ -324,14 +336,17 @@
         padding: 10px 85px;
     }
 
+
+
     .list-group-item img{
         width: 50px;
         left: 15px;
         top: calc(50% - 25px);
     }
     .list-group-item h2{
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: bold;
+        width: 100px;
     }
 
     .list-group-item p2{
@@ -362,51 +377,88 @@
      }
 
      /*form */
+     #form-box {
+        padding: 0px ;
+        width: 400px;
+        height: 700px;
+        left: 0px;
+        margin-bottom: 0px;
+        margin-top: 50px;
+        margin-bottom: 50px
 
-     #add-form-container {
-        margin-top: 100px;
+    }
+
+    #form-box button{
+        position: absolute;
+        left: 250;
+        right: 85px;
+        top: 550px;
+        color: #f7f9fc;
+        background-color: #f03e3e;
+        border-color: #f03e3e;
+        
        
-    }
-
-    #form-box {
-        padding: 25px;
-        box-shadow: 0px 1px 5px rgba(0, 0, 0, .15);
-        border-radius: 4px;
-        background-color: #fff7cc;
-        margin-bottom: 50px;
-        width: auto;
-        height: 800px;
-        position: relative;
-    }
-    
-    #add-form-container h2 {
-        color: #f03e3e;
-        font-weight: bold;
-        font-size: 20px;
-        margin-bottom: 30px;
-    }
-    
-    #add-form-container form label {
-        font-weight: bold;
-    }
-
-    .text-center{
-        margin-left: -80px;
-        font-size: 20px;
-        width: 800px;
         
     }
-    #add-form-container input, #add-form-container textarea {
-        border: 2px solid #ccc;
-    }
-    
-    
-    
-   
-    #form-box button {
-        background-color:#fff;
+
+    #form-box button :hover{
+        background-color: #fff;
         color: #f03e3e;
         border-color: #f03e3e;
     }
+
+    .col-md-12 h1 {
+        position: absolute;
+        padding: 0;
+        font-size: 15px;
+        width: 300px;
+        left: 30px;
+        right: 150px;
+        font-weight: bold;
+    }
+
+    #form-box h2{
+        position: absolute;
+        padding: 0px 15px;
+        font-size: 12px;
+        text-align: center;
+        left: 10x;
+        width: 300;
+        
+    }
+    
+    .form-group  {
+        top: 30px;
+        padding: 30px 25px;
+        
+        
+        
+    }
+
+    .form-group input, .form-group textarea{
+        width: 300px;
+        position: absolute;
+        left: 30px;
+
+        
+        
+    }
+
+    #titlehelp{
+        position: absolute;
+        top: 100px;
+        left: 25px;
+    }
+    
+    /* view */
+    .main-color.tit {
+        top: -140px;
+        font-size: 30px;
+        width: 320px;
+    }
+    
+
+    
+    
 
 }
