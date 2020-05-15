@@ -281,3 +281,132 @@
     font-weight: bold;
 }
 
+/* responsive */
+@media (max-width: 481px){
+    /* nav bar */
+    #navbarNav{
+        text-align: center
+    }
+
+    
+    #top-container {
+        
+        padding: 50px;
+        padding-top: 100px;
+    
+    }
+
+    #main-title {
+        font-size: 2.2rem;
+    }
+
+    #main-subtitle{
+        font-size: 1.5rem;
+    }
+
+    #search-form{
+        padding: 0;
+
+    }
+    
+    .form-control{
+        position: absolute;
+        width: 150px;
+        left: 0px;
+
+    }
+
+    #jobs-container{
+        padding:20px;
+    }
+
+    .list-group-item{
+        padding: 10px 85px;
+    }
+
+    .list-group-item img{
+        width: 50px;
+        left: 15px;
+        top: calc(50% - 25px);
+    }
+    .list-group-item h2{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .list-group-item p2{
+        font-size: 0.9rem;
+    }
+
+    .list-group-item p1{
+        font-size: 0.9rem;
+    }
+
+    .new-job-label{
+        position: absolute;
+        left: 0px;
+        top: 1px;
+        width: 60px;
+        font-size: 0.9rem;
+    }
+
+    .list-group-item a{
+        position: absolute;
+        left: 230px;
+        top: 35px;
+        width: 90px;
+        font-size: 0.9rem;
+    }
+     .new-job-label{
+         display: none;
+     }
+
+     /*form */
+
+     #add-form-container {
+        margin-top: 100px;
+       
+    }
+
+    #form-box {
+        padding: 25px;
+        box-shadow: 0px 1px 5px rgba(0, 0, 0, .15);
+        border-radius: 4px;
+        background-color: #fff7cc;
+        margin-bottom: 50px;
+        width: auto;
+        height: 800px;
+        position: relative;
+    }
+    
+    #add-form-container h2 {
+        color: #f03e3e;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    #add-form-container form label {
+        font-weight: bold;
+    }
+
+    .text-center{
+        margin-left: -80px;
+        font-size: 20px;
+        width: 800px;
+        
+    }
+    #add-form-container input, #add-form-container textarea {
+        border: 2px solid #ccc;
+    }
+    
+    
+    
+   
+    #form-box button {
+        background-color:#fff;
+        color: #f03e3e;
+        border-color: #f03e3e;
+    }
+
+}
