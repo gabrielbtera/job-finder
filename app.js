@@ -5,6 +5,9 @@ const app        = express();
 const path       = require("path"); // instalando o handlebars
 const PORT       = 3000;
 const bodyParser = require('body-parser');
+const job        = require('./models/job');
+
+
 // conexão com o banco de dados
 const db         = require('./db/connection'); 
 
@@ -40,7 +43,14 @@ db
 
 // criação de rota
 app.get('/', function(requisicao, resposta) {
-    resposta.render("index"); // rederiza a pag pelo servidor
+    job.findAll({order: [
+        ['createdAt', 'DESC']
+    ]}).then(jobs => {
+        resposta.render('index', {
+            jobs
+        });
+    });
+     // rederiza a pag pelo servidor
 });
 
 // rotas do job
